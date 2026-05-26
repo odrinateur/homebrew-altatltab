@@ -1,6 +1,6 @@
 cask "altatltab" do
-  version "10.14.0"
-  sha256 "b0358a27aa18e7f084185c6154f5da911c5417c19f38108440be04ae2b0bfece"
+  version "10.14.1"
+  sha256 "20ff1214cbf08ade6c8b344ff99e2f029a3ba1e764cb3bbd0c787f65c8873665"
 
   url "https://github.com/odrinateur/alt-alt-tab-macos/releases/download/v#{version}/AltAtlTab-#{version}.zip",
       verified: "github.com/odrinateur/alt-alt-tab-macos/"
@@ -16,6 +16,12 @@ cask "altatltab" do
   depends_on :macos
 
   app "AltAtlTab.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/AltAtlTab.app"],
+                   must_succeed: false
+  end
 
   uninstall quit: "com.local.altatltab"
 
