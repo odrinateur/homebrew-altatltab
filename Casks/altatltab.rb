@@ -1,6 +1,6 @@
 cask "altatltab" do
-  version "10.13.1"
-  sha256 "f7bb615bbd92d458de579baa42ec0f2b7dd917429c00574be9e7f203a56cf158"
+  version "10.13.2"
+  sha256 "85bcc9f5b7129900f868ccbc92d28e3532db9da8ee749ec36cef0737776a9e28"
 
   url "https://github.com/odrinateur/alt-alt-tab-macos/releases/download/v#{version}/AltAtlTab-#{version}.zip",
       verified: "github.com/odrinateur/alt-alt-tab-macos/"
@@ -13,7 +13,7 @@ cask "altatltab" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on :macos
 
   app "AltAtlTab.app"
 
