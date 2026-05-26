@@ -1,6 +1,6 @@
 cask "altatltab" do
-  version "10.13.3"
-  sha256 "8ae7d1e2e5043080fa0d157a13320c91532b76def4dacfd9cd3a8beb2f027124"
+  version "10.14.0"
+  sha256 "b0358a27aa18e7f084185c6154f5da911c5417c19f38108440be04ae2b0bfece"
 
   url "https://github.com/odrinateur/alt-alt-tab-macos/releases/download/v#{version}/AltAtlTab-#{version}.zip",
       verified: "github.com/odrinateur/alt-alt-tab-macos/"
